@@ -98,6 +98,8 @@ select {
   --font-family-sans: sans-serif;
   --font-family-serif: serif;
   --font-family-mono: monospace;
+  --font-family-futura-md: "futura-pt", sans-serif;
+  --font-family-dotum: "dotum", sans-serif;
 
   /* Containers */
   --container-full: 100%;
@@ -853,9 +855,10 @@ select {
 
 body {
   font-size: var(--font-size-base);
-  font-family: var(--font-family-sans);
+  font-family: var(--font-family-dotum);
   line-height: 1.5;
 }
+
 p {
   margin-bottom: var(--space-md);
 }
@@ -867,8 +870,10 @@ h3,
 .text-md {
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--space-md);
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-futura-md);
   line-height: 1.5;
+  font-weight: 500;
+  font-style: normal;
 }
 .text-sm {
   font-size: var(--font-size-sm);
