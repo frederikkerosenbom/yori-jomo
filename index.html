@@ -4,8 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'kmz5kmd',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <link rel="stylesheet" href="https://use.typekit.net/kmz5kmd.css">
     <link rel="stylesheet" href="system.css">
     <link rel="stylesheet" href="style.css">
+
     <title>Struktur starter</title>
 </head>
 
@@ -65,7 +77,7 @@
 
         <div class="container">
             <div class="grid">
-                <div class="col-12">
+                <div class="col-12 flex justify-center">
                     <h3>Something New</h3>
                 </div>
 
@@ -140,6 +152,14 @@
                             <h1>Handmade in Italy</h1>
                         </div>
 
+                    <div class="col-7 col-md-5"><img src="filer/handmade/handmade1.png" alt=""></div>
+                    <div class="grid col-12 col-md-7 grid-2">
+                        <div class="col-10 col-md-9 col-lg-7 col-start-2">
+                            <p>Yori Jomo is a Copenhagen-based footwear brand, handcrafted in Tuscany, Italy with a
+                                focus on
+                                craftsmanship, quality
+                                materials, and timeless design.</p>
+                            <a href="#">READ MORE</a>
                         <div class="col-5"><img src="filer/handmade/handmade1.png" alt=""></div>
                         <div class="grid col-7 grid-2">
                             <div class="col-7 col-start-2">
@@ -164,6 +184,8 @@
                             <div class="col-5 col-start-8 handmade2"><img src="filer/handmade/handmade2.png" alt="">
                             </div>
                         </div>
+                        <div class="col-7 col-md-5 col-start-8 handmade2"><img src="filer/handmade/handmade2.png"
+                                alt=""></div>
                     </div>
 
                 </div>
