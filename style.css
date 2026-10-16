@@ -318,3 +318,57 @@
     min-height: 0;
   }
 }
+
+/* Knap */
+/* Container for knappen */
+.custom-sketch-btn {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* Fælles styling for begge SVG-billeder med en blød ease-in-out overgang (f.eks. 0.3 sekunder) */
+.custom-sketch-btn img {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  transition: opacity 0.3s ease-in-out; /* Her styrer du hastigheden og blødheden */
+}
+
+/* Placer hover-billedet ovenpå det normale billede */
+.custom-sketch-btn .img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* Skjult som standard */
+}
+
+/* HOVER LOGIK: Toner blødt ind og ud */
+.custom-sketch-btn:hover .img-default {
+  opacity: 0;
+}
+
+.custom-sketch-btn:hover .img-hover {
+  opacity: 1;
+}
+
+/* Placer teksten præcist i midten af knappen */
+.custom-sketch-btn span {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+
+  /* Typografi */
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+}
