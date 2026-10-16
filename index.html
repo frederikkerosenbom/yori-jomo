@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="system.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Struktur starter</title>
+</head>
+
+<body id="top">
+    <!-- Header -->
+    <header class="navbarfixed">
+        <div>
+
+            <!-- <div class="container flex flex-row justify-between items-center p-l-lg p-r-lg p-t-md p-b-md"> -->
+            <div class="logo"><a href="#top"><img src="filer/logo/Logo.svg" alt=""></a></div>
+            <!-- <nav class="hidden visible-md">
+                <a href="#container" class="p-r-sm">Container</a>
+                <a href="#grid" class="p-r-sm">Grid</a>
+                <a href="#farver" class="p-r-sm">Farver</a>
+                <a href="#tekst" class="p-r-sm">Tekst</a>
+                <a href="#fotos" class="p-r-sm">Fotos</a>
+                <a href="#forms" class="p-r-sm">Forms</a>
+                <nav class="hidden visible-md">
+                    <a href="blank.html" class="p-r-sm">Blank page</a>
+
+                </nav> 
+            </nav>-->
+            <!-- <div class="navicon hidden-md">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6" height="32" width="32">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+            <nav class="mobile-menu hidden flex-col justify-center items-center hidden-md">
+                <a href="#top" class="p-r-sm">Top</a>
+                <a href="#container" class="p-r-sm">Container</a>
+                <a href="#grid" class="p-r-sm">Grid</a>
+                <a href="#farver" class="p-r-sm">Farver</a>
+                <a href="#tekst" class="p-r-sm">Tekst</a>
+                <a href="#fotos" class="p-r-sm">Fotos</a>
+                <a href="#forms" class="p-r-sm">Forms</a>
+            </nav> -->
+        </div>
+    </header>
+    <!-- Header slut -->
+
+    <!-- Main content -->
+    <main class="bg-bright">
+        <div class="container-full hero">
+            <div class="container-full ">
+                <div class="grid">
+                    <div class="col-4">
+                        <img src="filer/hero/1.png" alt="struktur hero foto">
+                    </div>
+                    <div class=" col-4"><img src="filer/hero/2.png" alt="struktur hero foto"></div>
+
+                    <div class="col-4"><img src="filer/hero/3.png" alt="struktur hero foto"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="grid">
+                <div class="col-12">
+                    <h3>Something New</h3>
+                </div>
+
+                <div class="col-12">
+                    <div class="product-carousel">
+
+                        <button class="carousel-prev" aria-label="Forrige produkt">
+                            &#10094;
+                        </button>
+
+                        <div class="carousel-track">
+
+                            <div class="carousel-slide active">
+                                <img src="filer/products/sko1.png" alt="ALBA Loafers Nappa Black">
+
+                                <div class="product-info">
+                                    <p>ALBA Loafers Nappa Black</p>
+                                    <p>2.200,00 kr</p>
+                                    <a href="#">Se more</a>
+                                </div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="filer/products/sko2.png" alt="Yori Jomo shoe">
+
+                                <div class="product-info">
+                                    <p>Product 2</p>
+                                    <p>2.200,00 kr</p>
+                                    <a href="#">Se more</a>
+                                </div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="filer/products/sko3.png" alt="Yori Jomo shoe">
+
+                                <div class="product-info">
+                                    <p>Product 3</p>
+                                    <p>2.200,00 kr</p>
+                                    <a href="#">Se more</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="carousel-next" aria-label="Næste produkt">
+                            &#10095;
+                        </button>
+
+                    </div>
+                </div>
+
+
+                <div class="col-12">
+                    <a href="#">SEE COLLECTION</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-full">
+                <div class="grid">
+
+                    <div class="col-12">
+                        <h1>Handmade in Italy</h1>
+                    </div>
+
+                    <div class="col-5"><img src="filer/handmade/handmade1.png" alt=""></div>
+                    <div class="grid col-7 grid-2">
+                        <div class="col-7 col-start-2">
+                            <p>Yori Jomo is a Copenhagen-based footwear brand, handcrafted in Tuscany, Italy with a
+                                focus on
+                                craftsmanship, quality
+                                materials, and timeless design.</p>
+                            <a href="#">READ MORE</a>
+
+                        </div>
+                        <div class="col-5 col-start-8 handmade2"><img src="filer/handmade/handmade2.png" alt=""></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <section class="stores-section bg-dark">
+
+            <div class="stores-content">
+
+                <h2>In stores</h2>
+
+                <!-- Dropdown -->
+                <div class="stores-dropdown">
+
+                    <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="country-options">
+                        <span id="selected-country">CHOOSE LOCATION</span>
+                        <span class="dropdown-arrow">&#8964;</span>
+                    </button>
+
+                    <div class="dropdown-options" id="country-options" hidden>
+                        <button type="button" data-country="denmark">Denmark</button>
+                        <button type="button" data-country="norway">Norway</button>
+                    </div>
+
+                </div>
+
+                <!-- Denmark -->
+                <div class="stores-list" id="denmark-stores" hidden>
+
+                    <div class="store">
+                        <h4>Adélie</h4>
+                        <p>København N</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>Cristels</h4>
+                        <p>Hørsholm</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>FF2</h4>
+                        <p>Aarhus C</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>Husetno10</h4>
+                        <p>Horsens</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>Leah Maria</h4>
+                        <p>Charlottenlund</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>Lubarol</h4>
+                        <p>Copenhagen K</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>Rooms Galore</h4>
+                        <p>Hornbæk</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>Ruebirch</h4>
+                        <p>Nykøbing Falster</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>Verk</h4>
+                        <p>Dragør</p>
+                    </div>
+
+                </div>
+
+                <!-- Norway -->
+                <div class="stores-list" id="norway-stores" hidden>
+
+                    <div class="store">
+                        <h4>Bolina</h4>
+                        <p>Stabekk</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>Ensemble</h4>
+                        <p>Oslo</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>Liseanns</h4>
+                        <p>Kragerø</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>LOT33</h4>
+                        <p>Bergen</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>Modo</h4>
+                        <p>Ålesund</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>Rolfsen</h4>
+                        <p>Stavanger</p>
+                    </div>
+
+                    <div class="store">
+                        <h4>Shine</h4>
+                        <p>Trondheim</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Billede -->
+            <div class="stores-image">
+                <img src="filer/section3.png" alt="Yori Jomo shoes">
+            </div>
+
+        </section>
+
+    </main>
+    <!-- Main slut -->
+
+    <!-- Footer -->
+    <footer class="container-full bg-bright">
+        <div class="container text-center p-md">
+            <p>Lavet med ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Inkluderer scripts-->
+    <script src="js.js"></script>
+</body>
+
+</html>
