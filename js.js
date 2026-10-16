@@ -73,7 +73,13 @@ if (dropdownToggle && dropdownOptions && selectedCountry) {
       const country = button.dataset.country;
 
       // Opdater dropdown-tekst
-      selectedCountry.textContent = country.toUpperCase();
+
+      // Opdater dropdown-tekst
+      if (country === "") {
+        selectedCountry.textContent = "CHOOSE LOCATION";
+      } else {
+        selectedCountry.textContent = country.toUpperCase();
+      }
 
       // Skjul alle butikslister
       storeLists.forEach((list) => {
@@ -81,10 +87,14 @@ if (dropdownToggle && dropdownOptions && selectedCountry) {
       });
 
       // Vis butikker fra valgt land
-      const selectedList = document.querySelector(`#${country}-stores`);
 
-      if (selectedList) {
-        selectedList.hidden = false;
+      // Vis kun butikker, hvis et land er valgt
+      if (country !== "") {
+        const selectedList = document.querySelector(`#${country}-stores`);
+
+        if (selectedList) {
+          selectedList.hidden = false;
+        }
       }
 
       // Luk dropdown
