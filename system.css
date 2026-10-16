@@ -92,7 +92,7 @@ select {
   --font-size-xl: 3rem;
   --font-weight-light: 300;
   --font-weight-normal: 400;
-  --font-weight-bold: 700;
+  --font-weight-bold: 500;
 
   /* Fonte */
   --font-family-sans: sans-serif;
@@ -862,6 +862,10 @@ body {
 p {
   margin-bottom: var(--space-md);
 }
+
+a {
+  font-family: var(--font-family-dotum);
+}
 h1,
 h2,
 h3,
@@ -872,7 +876,6 @@ h3,
   margin-bottom: var(--space-md);
   font-family: var(--font-family-futura-md);
   line-height: 1.5;
-  font-weight: 500;
   font-style: normal;
 }
 .text-sm {
