@@ -23,303 +23,333 @@
 
 <body id="top">
     <!-- Header -->
-    <header class="navbarfixed">
-        <div>
-            <div class="logo"><a href="#top"><img src="filer/logo/Logo.svg" alt=""></a></div>
+    <input type="checkbox" id="menu-toggle">
 
-        </div>
+    <header class="header">
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <a href="#" class="logo">YORI JOMO</a>
     </header>
-    <!-- Header slut -->
 
-    <!-- Main content -->
-    <main class="bg-bright">
-        <div class="container-full hero">
-            <div class="container-full ">
-                <div class="grid">
-                    <div class="col-12 col-md-4">
-                        <img src="filer/hero/1.png" alt="struktur hero foto">
-                    </div>
-                    <div class="col-12 col-md-4"><img src="filer/hero/2.png" alt="struktur hero foto"></div>
+    <div class="menu-overlay">
 
-                    <div class="col-12 col-md-4"><img src="filer/hero/3.png" alt="struktur hero foto"></div>
-                </div>
-            </div>
-        </div>
-        <section class="products">
-            <div class="container">
-                <div class="grid">
-                    <div class="col-12 flex justify-center">
-                        <h3>Something New</h3>
-                    </div>
+        <nav class="navigation">
+            <a href="/shop">SHOP</a>
+            <a href="/about">ABOUT</a>
+            <a href="/contact">CONTACT</a>
+        </nav>
 
-                    <div class="col-10 col-start-2">
-                        <div class="product-carousel">
-                            <button class="carousel-prev" aria-label="Forrige produkt">
-                                &#10094;
-                            </button>
+        <div class="categories">
+            <a href="/shoes" class="category">
+                <img src="filer/img/imgshoe.webp" alt="Shoes">
+                <span>SHOES</span>
+            </a>
 
-                            <div class="carousel-track">
-
-                                <div class="carousel-slide active">
-                                    <img src="filer/products/sko1.png" alt="ALBA Loafers Nappa Black">
-
-                                    <div class="product-info">
-                                        <p>ALBA Loafers Nappa Black</p>
-                                        <p>2.200,00 kr</p>
-                                        <a href="#">Se more</a>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-slide">
-                                    <img src="filer/products/sko2.png" alt="Yori Jomo shoe">
-
-                                    <div class="product-info">
-                                        <p>ALBA Loafers Nappa Merlot</p>
-                                        <p>2.200,00 kr</p>
-                                        <a href="#">Se more</a>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-slide">
-                                    <img src="filer/products/sko3.png" alt="Yori Jomo shoe">
-
-                                    <div class="product-info">
-                                        <p>ALBA Loafers Nappa Chestnut</p>
-                                        <p>2.200,00 kr</p>
-                                        <a href="#">Se more</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <button class="carousel-next " aria-label="Næste produkt">
-                                &#10095;
-                            </button>
-
-
-                        </div>
-                    </div>
-
-
-                    <div class="col-12 flex justify-center">
-                        <a href="#" class="custom-sketch-btn">
-                            <!-- Standard billede -->
-                            <img src="filer/button/YoriJomoKnap.svg" alt="See Collection" class="img-default">
-
-                            <!-- Hover billede (kræver at du har en fil der hedder det samme med -hover) -->
-                            <img src="filer/button/YoriJomoKnap-Hover.svg" alt="See Collection" class="img-hover">
-
-                            <span>
-                                SEE COLLECTION
-                            </span>
-                        </a>
-                    </div>
-
-                </div>
-        </section>
-
-        <section class="handmade">
-            <div class="container">
-                <div class="container-full">
-                    <div class="grid">
-
-                        <div class="col-12">
-                            <h1>Handmade in Italy</h1>
-                        </div>
-
-                        <div class="col-7 col-md-5"><img src="filer/handmade/handmade1.png" alt=""></div>
-                        <div class="grid col-12 col-md-7 grid-2">
-                            <div class="col-10 col-md-9 col-lg-7 col-start-2">
-                                <p>Yori Jomo is a Copenhagen-based footwear brand, handcrafted in Tuscany, Italy with a
-                                    focus on
-                                    craftsmanship, quality
-                                    materials, and timeless design.</p>
-                                <div>
-                                    <a href="#" class="custom-sketch-btn">
-                                        <!-- Standard billede -->
-                                        <img src="filer/button/YoriJomoKnap.svg" alt="Read More" class="img-default">
-
-                                        <!-- Hover billede (kræver at du har en fil der hedder det samme med -hover) -->
-                                        <img src="filer/button/YoriJomoKnap-Hover.svg" alt="Read More"
-                                            class="img-hover">
-
-                                        <span>READ MORE</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-7 col-md-5 col-start-8 flex self-end">
-                                <img src="filer/handmade/handmade2.png" alt="">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="stores-section bg-dark ">
-            <div class="container">
-                <div class="container-full">
-                    <div class="grid stores-content">
-                        <div class="col-12 col-md-5">
-                            <h2>In stores</h2>
-
-                            <!-- Dropdown -->
-                            <div class="stores-dropdown">
-
-                                <button class="dropdown-toggle" type="button" aria-expanded="false"
-                                    aria-controls="country-options">
-
-                                    <span id="selected-country">CHOOSE LOCATION</span>
-
-                                    <span class="dropdown-arrow">
-                                        <img src="filer/pil.svg" alt="">
-                                    </span>
-
-                                </button>
-
-
-                                <div class="dropdown-options" id="country-options" hidden>
-                                    <button type="button" data-country="">CHOOSE LOCATION</button>
-                                    <button type="button" data-country="denmark">DENMARK</button>
-                                    <button type="button" data-country="norway">NORWAY</button>
-                                </div>
-
-                            </div>
-
-                            <!-- Denmark -->
-                            <div class="stores-list" id="denmark-stores" hidden>
-
-                                <div class="store">
-                                    <h4>Adélie</h4>
-                                    <p>København N</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>Cristels</h4>
-                                    <p>Hørsholm</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>FF2</h4>
-                                    <p>Aarhus C</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>Husetno10</h4>
-                                    <p>Horsens</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>Leah Maria</h4>
-                                    <p>Charlottenlund</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>Lubarol</h4>
-                                    <p>Copenhagen K</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>Rooms Galore</h4>
-                                    <p>Hornbæk</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>Ruebirch</h4>
-                                    <p>Nykøbing Falster</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>Verk</h4>
-                                    <p>Dragør</p>
-                                </div>
-
-                            </div>
-
-                            <!-- Norway -->
-                            <div class="stores-list" id="norway-stores" hidden>
-
-                                <div class="store">
-                                    <h4>Bolina</h4>
-                                    <p>Stabekk</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>Ensemble</h4>
-                                    <p>Oslo</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>Liseanns</h4>
-                                    <p>Kragerø</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>LOT33</h4>
-                                    <p>Bergen</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>Modo</h4>
-                                    <p>Ålesund</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>Rolfsen</h4>
-                                    <p>Stavanger</p>
-                                </div>
-
-                                <div class="store">
-                                    <h4>Shine</h4>
-                                    <p>Trondheim</p>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Billede -->
-                        <div class="stores-image col-12 col-md-7 ">
-                            <img src="filer/section3.png" alt="Yori Jomo shoes">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-    <!-- Main slut -->
-
-    <!-- Footer -->
-    <footer class="container-full bg-bright">
-
-        <div class="col-12">
-            <img src="filer/logo/Logo.svg" alt="logo">
-        </div>
-
-        <div class="col-12">
-            <div class="flex justify-center items-center gap-md m-b-md">
-                <a href="#"><img src="filer/footer/YorijomoInsta.svg" alt="Instagram" class="footer-icon"></a>
-                <a href="#"><img src="filer/footer/YoriJomoFb.svg" alt="Facebook" class="footer-icon"></a>
-                <a href="#"><img src="filer/footer/YoriJomoMail.svg" alt="Mail" class="footer-icon"></a>
-            </div>
-        </div>
-
-        <div class="col-12 flex justify-center">
-            <a href="#" class="custom-sketch-btn">
-                <!-- Standard billede -->
-                <img src="filer/button/YoriJomoKnap.svg" alt="Tilmeld nyhedsbrev" class="img-default">
-
-                <!-- Hover billede (kræver at du har en fil der hedder det samme med -hover) -->
-                <img src="filer/button/YoriJomoKnap-Hover.svg" alt="Tilmeld nyhedsbrev" class="img-hover">
-
-                <span>TILMELD NYHEDSBREV</span>
+            <a href="/belts" class="category">
+                <img src="filer/img/imgbelt.webp" alt="Belts">
+                <span>BELTS</span>
             </a>
         </div>
-    </footer>
 
-    <!-- Inkluderer scripts-->
-    <script src="js.js"></script>
+    </div>
+
+</body>
+
+</html>
+<!-- Header slut -->
+
+<!-- Main content -->
+<main class="bg-bright">
+    <div class="container-full hero">
+        <div class="container-full ">
+            <div class="grid">
+                <div class="col-12 col-md-4">
+                    <img src="filer/hero/1.png" alt="struktur hero foto">
+                </div>
+                <div class="col-12 col-md-4"><img src="filer/hero/2.png" alt="struktur hero foto"></div>
+
+                <div class="col-12 col-md-4"><img src="filer/hero/3.png" alt="struktur hero foto"></div>
+            </div>
+        </div>
+    </div>
+    <section class="products">
+        <div class="container">
+            <div class="grid">
+                <div class="col-12 flex justify-center">
+                    <h3>Something New</h3>
+                </div>
+
+                <div class="col-10 col-start-2">
+                    <div class="product-carousel">
+                        <button class="carousel-prev" aria-label="Forrige produkt">
+                            &#10094;
+                        </button>
+
+                        <div class="carousel-track">
+
+                            <div class="carousel-slide active">
+                                <img src="filer/products/sko1.png" alt="ALBA Loafers Nappa Black">
+
+                                <div class="product-info">
+                                    <p>ALBA Loafers Nappa Black</p>
+                                    <p>2.200,00 kr</p>
+                                    <a href="#">Se more</a>
+                                </div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="filer/products/sko2.png" alt="Yori Jomo shoe">
+
+                                <div class="product-info">
+                                    <p>ALBA Loafers Nappa Merlot</p>
+                                    <p>2.200,00 kr</p>
+                                    <a href="#">Se more</a>
+                                </div>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="filer/products/sko3.png" alt="Yori Jomo shoe">
+
+                                <div class="product-info">
+                                    <p>ALBA Loafers Nappa Chestnut</p>
+                                    <p>2.200,00 kr</p>
+                                    <a href="#">Se more</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="carousel-next " aria-label="Næste produkt">
+                            &#10095;
+                        </button>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-12 flex justify-center">
+                    <a href="#" class="custom-sketch-btn">
+                        <!-- Standard billede -->
+                        <img src="filer/button/YoriJomoKnap.svg" alt="See Collection" class="img-default">
+
+                        <!-- Hover billede (kræver at du har en fil der hedder det samme med -hover) -->
+                        <img src="filer/button/YoriJomoKnap-Hover.svg" alt="See Collection" class="img-hover">
+
+                        <span>
+                            SEE COLLECTION
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+    </section>
+
+    <section class="handmade">
+        <div class="container">
+            <div class="container-full">
+                <div class="grid">
+
+                    <div class="col-12">
+                        <h1>Handmade in Italy</h1>
+                    </div>
+
+                    <div class="col-7 col-md-5"><img src="filer/handmade/handmade1.png" alt=""></div>
+                    <div class="grid col-12 col-md-7 grid-2">
+                        <div class="col-10 col-md-9 col-lg-7 col-start-2">
+                            <p>Yori Jomo is a Copenhagen-based footwear brand, handcrafted in Tuscany, Italy with a
+                                focus on
+                                craftsmanship, quality
+                                materials, and timeless design.</p>
+                            <div>
+                                <a href="#" class="custom-sketch-btn">
+                                    <!-- Standard billede -->
+                                    <img src="filer/button/YoriJomoKnap.svg" alt="Read More" class="img-default">
+
+                                    <!-- Hover billede (kræver at du har en fil der hedder det samme med -hover) -->
+                                    <img src="filer/button/YoriJomoKnap-Hover.svg" alt="Read More" class="img-hover">
+
+                                    <span>READ MORE</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-7 col-md-5 col-start-8 flex self-end">
+                            <img src="filer/handmade/handmade2.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stores-section bg-dark ">
+        <div class="container">
+            <div class="container-full">
+                <div class="grid stores-content">
+                    <div class="col-12 col-md-5">
+                        <h2>In stores</h2>
+
+                        <!-- Dropdown -->
+                        <div class="stores-dropdown">
+
+                            <button class="dropdown-toggle" type="button" aria-expanded="false"
+                                aria-controls="country-options">
+
+                                <span id="selected-country">CHOOSE LOCATION</span>
+
+                                <span class="dropdown-arrow">
+                                    <img src="filer/pil.svg" alt="">
+                                </span>
+
+                            </button>
+
+
+                            <div class="dropdown-options" id="country-options" hidden>
+                                <button type="button" data-country="">CHOOSE LOCATION</button>
+                                <button type="button" data-country="denmark">DENMARK</button>
+                                <button type="button" data-country="norway">NORWAY</button>
+                            </div>
+
+                        </div>
+
+                        <!-- Denmark -->
+                        <div class="stores-list" id="denmark-stores" hidden>
+
+                            <div class="store">
+                                <h4>Adélie</h4>
+                                <p>København N</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>Cristels</h4>
+                                <p>Hørsholm</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>FF2</h4>
+                                <p>Aarhus C</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>Husetno10</h4>
+                                <p>Horsens</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>Leah Maria</h4>
+                                <p>Charlottenlund</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>Lubarol</h4>
+                                <p>Copenhagen K</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>Rooms Galore</h4>
+                                <p>Hornbæk</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>Ruebirch</h4>
+                                <p>Nykøbing Falster</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>Verk</h4>
+                                <p>Dragør</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Norway -->
+                        <div class="stores-list" id="norway-stores" hidden>
+
+                            <div class="store">
+                                <h4>Bolina</h4>
+                                <p>Stabekk</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>Ensemble</h4>
+                                <p>Oslo</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>Liseanns</h4>
+                                <p>Kragerø</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>LOT33</h4>
+                                <p>Bergen</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>Modo</h4>
+                                <p>Ålesund</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>Rolfsen</h4>
+                                <p>Stavanger</p>
+                            </div>
+
+                            <div class="store">
+                                <h4>Shine</h4>
+                                <p>Trondheim</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Billede -->
+                    <div class="stores-image col-12 col-md-7 ">
+                        <img src="filer/section3.png" alt="Yori Jomo shoes">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<!-- Main slut -->
+
+<!-- Footer -->
+<footer class="container-full bg-bright">
+
+    <div class="col-12">
+        <img src="filer/logo/Logo.svg" alt="logo">
+    </div>
+
+    <div class="col-12">
+        <div class="flex justify-center items-center gap-md m-b-md">
+            <a href="#"><img src="filer/footer/YorijomoInsta.svg" alt="Instagram" class="footer-icon"></a>
+            <a href="#"><img src="filer/footer/YoriJomoFb.svg" alt="Facebook" class="footer-icon"></a>
+            <a href="#"><img src="filer/footer/YoriJomoMail.svg" alt="Mail" class="footer-icon"></a>
+        </div>
+    </div>
+
+    <div class="col-12 flex justify-center">
+        <a href="#" class="custom-sketch-btn">
+            <!-- Standard billede -->
+            <img src="filer/button/YoriJomoKnap.svg" alt="Tilmeld nyhedsbrev" class="img-default">
+
+            <!-- Hover billede (kræver at du har en fil der hedder det samme med -hover) -->
+            <img src="filer/button/YoriJomoKnap-Hover.svg" alt="Tilmeld nyhedsbrev" class="img-hover">
+
+            <span>TILMELD NYHEDSBREV</span>
+        </a>
+    </div>
+</footer>
+
+<!-- Inkluderer scripts-->
+<script src="js.js"></script>
 </body>
 
 </html>
