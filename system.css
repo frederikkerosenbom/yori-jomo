@@ -237,8 +237,6 @@ select {
 /* ========== 3: Layout containers & Breakpoints ========== */
 
 .container {
-  /* width: var(--container-fluid); */
-  /* max-width: var(--container-wide); */
   margin: 0 1rem;
 }
 
@@ -256,7 +254,7 @@ select {
 .container,
 .container-narrow,
 .container-fluid {
-  padding: var(--space-xxl) var(--space-md);
+  padding: var(--space-sm) var(--space-md);
 }
 
 /* ========== 4: Layout/Grid ========== */

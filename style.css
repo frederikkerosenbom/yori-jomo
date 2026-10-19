@@ -1,11 +1,13 @@
 section {
   margin-block: var(--space-xxl);
 }
+
 @media (min-width: 760px) {
   section {
     margin-block: var(--space-xxxl);
   }
 }
+
 .hero img {
   width: 100%;
   height: 800px;
@@ -431,7 +433,7 @@ h1,
 /* Venstre side */
 
 .stores-content h2 {
-  margin-bottom: 35px;
+  margin-block: 35px;
 }
 
 /* Dropdown */
