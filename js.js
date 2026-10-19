@@ -1,118 +1,100 @@
-/* MOBIL MENU */
+/* =========================
+   NAVIGATION MENU
+========================= */
 
-const navicon = document.querySelector(".navicon");
-const mobileMenu = document.querySelector(".mobile-menu");
-const logo = document.querySelector(".logo");
+const menuToggle = document.querySelector("#menuToggle");
+const mainMenu = document.querySelector("#mainMenu");
 
-if (navicon && mobileMenu) {
-  const toggleMobileMenu = () => {
-    mobileMenu.classList.toggle("hidden");
-    mobileMenu.classList.toggle("flex");
-  };
+if (menuToggle && mainMenu) {
+  function openMenu() {
+    mainMenu.classList.add("open");
+    mainMenu.inert = false;
 
-  navicon.addEventListener("click", toggleMobileMenu);
-  mobileMenu.addEventListener("click", toggleMobileMenu);
+    menuToggle.classList.add("active");
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuToggle.setAttribute("aria-label", "Luk menu");
 
-  if (logo) {
-    logo.addEventListener("click", () => {
-      if (mobileMenu.classList.contains("flex")) {
-        toggleMobileMenu();
-      }
-    });
-  }
-}
+    // Skift navbarens baggrundsfarve
+    document.querySelector(".site-header").classList.add("menu-active");
 
-/* NEWSLETTER POPUP */
-
-const newsletterPopup = document.querySelector("#newsletterPopup");
-const closeNewsletter = document.querySelector("#closeNewsletter");
-const newsletterForm = document.querySelector("#newsletterForm");
-const newsletterMessage = document.querySelector("#newsletterMessage");
-
-if (newsletterPopup && closeNewsletter && newsletterForm) {
-  let previousFocus = null;
-
-  // Åbn popup
-  function openNewsletter() {
-    previousFocus = document.activeElement;
-    newsletterPopup.hidden = false;
     document.body.style.overflow = "hidden";
-    closeNewsletter.focus();
   }
 
-  // Luk popup
-  function hideNewsletter() {
-    newsletterPopup.hidden = true;
+  function closeMenu() {
+    mainMenu.classList.remove("open");
+    mainMenu.inert = true;
+
+    menuToggle.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Åbn menu");
+
+    // Gendan navbarens normale baggrundsfarve
+    document.querySelector(".site-header").classList.remove("menu-active");
+
     document.body.style.overflow = "";
-
-    sessionStorage.setItem("newsletterClosed", "true");
-
-    if (previousFocus) {
-      previousFocus.focus();
-    }
   }
 
-  // Vis én gang pr. browsersession
-  if (!sessionStorage.getItem("newsletterClosed")) {
-    openNewsletter();
-  }
-
-  // Luk ved CLOSE
-  closeNewsletter.addEventListener("click", hideNewsletter);
-
-  // Luk ved klik på den mørke baggrund
-  newsletterPopup.addEventListener("click", (event) => {
-    if (event.target === newsletterPopup) {
-      hideNewsletter();
+  // Klik på hamburger / X
+  menuToggle.addEventListener("click", () => {
+    if (mainMenu.classList.contains("open")) {
+      closeMenu();
+    } else {
+      openMenu();
     }
   });
 
   // Luk med Escape
   document.addEventListener("keydown", (event) => {
-    if (newsletterPopup.hidden) return;
-
-    if (event.key === "Escape") {
-      hideNewsletter();
-    }
-
-    // Hold tastaturfokus inde i popup
-    if (event.key === "Tab") {
-      const focusable = Array.from(newsletterPopup.querySelectorAll("button:not([disabled]), input:not([disabled])")).filter((el) => el.getClientRects().length > 0);
-
-      if (!focusable.length) return;
-
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
+    if (event.key === "Escape" && mainMenu.classList.contains("open")) {
+      closeMenu();
+      menuToggle.focus();
     }
   });
 
-  // Demo-formular
-  newsletterForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+  // Luk når man klikker på et link
+  const menuLinks = mainMenu.querySelectorAll("a");
 
-    newsletterMessage.textContent = "Thank you! We have sent you an email to confirm.";
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+}
 
-    newsletterForm.reset();
+/* =========================
+   MENU HOVER - BILLEDESKIFT
+========================= */
+
+const menuHoverLinks = document.querySelectorAll(".menu-links [data-menu]");
+
+const menuProductGroups = document.querySelectorAll(".menu-product-group");
+
+// Funktion til at vise den rigtige gruppe
+function showMenuGroup(groupName) {
+  menuProductGroups.forEach((group) => {
+    group.classList.toggle("active", group.dataset.group === groupName);
+  });
+}
+
+// Skift billeder ved hover og tastaturfokus
+menuHoverLinks.forEach((link) => {
+  link.addEventListener("mouseenter", () => {
+    showMenuGroup(link.dataset.menu);
   });
 
-  // Åbn popup fra footer
-  const openNewsletterButton = document.querySelector("#openNewsletter");
+  link.addEventListener("focus", () => {
+    showMenuGroup(link.dataset.menu);
+  });
+});
 
-  if (openNewsletterButton) {
-    openNewsletterButton.addEventListener("click", (event) => {
-      event.preventDefault();
-      openNewsletter();
-    });
-  }
-} // Her slutter den overordnede if-blok
+// Nulstil til SHOP, når menuen lukkes
+const navigationToggle = document.querySelector("#menuToggle");
+
+if (navigationToggle) {
+  navigationToggle.addEventListener("click", () => {
+    if (!navigationToggle.classList.contains("active")) {
+      showMenuGroup("shop");
+    }
+  });
+}
 
 /* PRODUCT CAROUSEL */
 

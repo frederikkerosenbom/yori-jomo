@@ -17,18 +17,131 @@
     <link rel="stylesheet" href="https://use.typekit.net/kmz5kmd.css">
     <link rel="stylesheet" href="system.css">
     <link rel="stylesheet" href="style.css">
-
-    <title>Struktur starter</title>
+    <link rel="stylesheet" href="burger.css">
+    <title>YORI JOMO</title>
 </head>
 
 <body id="top">
     <!-- Header -->
-    <header class="navbarfixed">
-        <div>
-            <div class="logo"><a href="#top"><img src="filer/logo/Logo.svg" alt=""></a></div>
+    <!-- HEADER / NAVIGATION -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="header-bar">
+
+            <!-- Menu ikon -->
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Åbn menu" aria-expanded="false"
+                aria-controls="mainMenu">
+
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+
+            </button>
+
+
+            <!-- Logo -->
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="filer/logo/Logo.svg" alt="Yori Jomo">
+                </a>
+            </div>
 
         </div>
+
+        <!-- Menu som folder ned -->
+        <nav class="main-menu" id="mainMenu" aria-label="Hovednavigation" inert>
+
+            <div class="menu-inner">
+
+                <!-- VENSTRE SIDE -->
+                <div class="menu-links">
+
+                    <a href="shop.html" class="custom-sketch-btn" data-menu="shop">
+
+                        <img src="filer/button/YoriJomoKnap.svg" class="img-default" alt="">
+
+                        <img src="filer/button/YoriJomoKnap-Hover.svg" class="img-hover" alt="">
+
+                        <span>SHOP</span>
+                    </a>
+
+                    <a href="about.html" class="custom-sketch-btn" data-menu="about">
+
+                        <img src="filer/button/YoriJomoKnap.svg" class="img-default" alt="">
+
+                        <img src="filer/button/YoriJomoKnap-Hover.svg" class="img-hover" alt="">
+
+                        <span>ABOUT</span>
+                    </a>
+
+                    <a href="contact.html" class="custom-sketch-btn" data-menu="contact">
+
+                        <img src="filer/button/YoriJomoKnap.svg" class="img-default" alt="">
+
+                        <img src="filer/button/YoriJomoKnap-Hover.svg" class="img-hover" alt="">
+
+                        <span>CONTACT</span>
+                    </a>
+
+                </div>
+
+                <!-- HØJRE SIDE -->
+                <div class="menu-products">
+
+                    <!-- SHOP: Standard -->
+                    <div class="menu-product-group active" data-group="shop">
+
+                        <a href="shop.html" class="menu-product">
+                            <img src="filer/navigation/shoesNav.webp" alt="Yori Jomo black loafers">
+                            <span>SHOES</span>
+                        </a>
+
+                        <a href="belts.html" class="menu-product">
+                            <img src="filer/navigation/beltsNav.webp" alt="Yori Jomo belt">
+                            <span>BELTS</span>
+                        </a>
+
+                    </div>
+
+                    <!-- ABOUT -->
+                    <div class="menu-product-group" data-group="about">
+
+                        <a href="about.html" class="menu-product">
+                            <img src="filer/navigation/Nav1.webp" alt="Yori Jomo shoes">
+                            <span>OUR STORY</span>
+                        </a>
+
+                        <a href="retailers.html" class="menu-product">
+                            <img src="filer/navigation/Nav2.webp" alt="Yori Jomo retailer">
+                            <span>RETAILERS</span>
+                        </a>
+
+                    </div>
+
+                    <!-- CONTACT -->
+                    <div class="menu-product-group" data-group="contact">
+
+                        <a href="contact.html" class="menu-product">
+                            <img src="filer/navigation/Nav1.webp" alt="Contact Yori Jomo">
+                            <span>CONTACT US</span>
+                        </a>
+
+                        <a href="retailer-contact.html" class="menu-product">
+                            <img src="filer/navigation/Nav2.webp" alt="Become a Yori Jomo retailer">
+                            <span>BECOME A RETAILER</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </nav>
+
     </header>
+
     <!-- Header slut -->
 
     <!-- Main content -->
