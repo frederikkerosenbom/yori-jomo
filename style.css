@@ -1,3 +1,12 @@
+section {
+  margin-block: var(--space-xxl);
+}
+
+@media (min-width: 760px) {
+  section {
+    margin-block: var(--space-xxxl);
+  }
+}
 .hero img {
   width: 100%;
   height: 800px;
@@ -28,6 +37,241 @@ h1,
     font-size: var(--font-size-xl);
   }
 }
+
+/* NEWSLETTER POPUP */
+
+/* Mørk baggrund */
+.newsletter-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* Skjul popup */
+.newsletter-overlay[hidden] {
+  display: none;
+}
+
+/* Popup container */
+.newsletter-popup {
+  display: grid;
+  grid-template-columns: 54% 46%;
+
+  width: 100%;
+  max-width: 1000px;
+  min-height: 435px;
+  max-height: calc(100dvh - 40px);
+
+  background: var(--color-primary);
+  overflow-y: auto;
+
+  position: relative;
+}
+
+/* Venstre side */
+.newsletter-content {
+  padding: 45px 40px;
+  color: var(--color-dark);
+}
+
+.newsletter-content h2 {
+  font-family: var(--font-family-futura-md);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.newsletter-content > p {
+  font-family: var(--font-family-dotum);
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+/* Formular */
+#newsletterForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#newsletterForm label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* NEWSLETTER INPUT MED SVG STREGER */
+
+.newsletter-input-wrapper {
+  position: relative;
+  width: 100%;
+  padding-right: 8px;
+  padding-bottom: 5px;
+}
+
+/* Vandret håndtegnet streg */
+.newsletter-input-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 8px;
+
+  background-image: url("filer/streg-bund.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+}
+
+/* Lodret håndtegnet streg */
+.newsletter-input-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 8px;
+  height: 32px;
+
+  background-image: url("filer/streg-hoejre.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+}
+
+/* Selve inputfeltet */
+#newsletterForm #newsletterEmail {
+  display: block;
+  width: 100%;
+
+  padding: 10px 5px;
+
+  border: none;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+
+  background: transparent;
+  color: var(--color-dark);
+
+  font-family: var(--font-family-dotum);
+  font-size: 14px;
+}
+
+/* Fjern browser/system focus border */
+#newsletterForm #newsletterEmail:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Behold tydelig fokusmarkering */
+.newsletter-input-wrapper:focus-within {
+  outline: 2px solid var(--color-dark);
+  outline-offset: 4px;
+}
+
+#newsletterForm input:focus {
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid var(--color-dark);
+}
+
+/* Submit knap */
+.newsletter-popup .newsletter-submit {
+  min-width: 165px;
+  margin-top: 20px;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.newsletter-message {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+/* Højre side */
+.newsletter-image {
+  position: relative;
+  min-height: 435px;
+  max-height: 600px;
+}
+
+.newsletter-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Close knap */
+.newsletter-popup .newsletter-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+
+  color: var(--color-dark);
+  font-family: var(--font-family-dotum);
+  font-size: 16px;
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
+.newsletter-popup .newsletter-close:hover {
+  background: transparent;
+  color: var(--color-dark);
+  opacity: 0.6;
+}
+
+/* Mobil */
+@media (max-width: 760px) {
+  .newsletter-popup {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+  .newsletter-content {
+    padding: 55px 25px 30px;
+  }
+
+  .newsletter-content h2 {
+    font-size: 30px;
+  }
+
+  .newsletter-image {
+    min-height: 200px;
+    height: 220px;
+  }
+
+  .newsletter-popup .newsletter-close {
+    top: 15px;
+    right: 15px;
+    padding: 5px;
+    background: var(--color-primary);
+  }
+}
 /* PRODUCT CAROUSEL */
 
 .product-carousel {
@@ -56,6 +300,13 @@ h1,
 
   height: 400px;
   object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .carousel-slide img {
+    width: 60%;
+    place-self: center;
+  }
 }
 
 /* Produktinformation */
@@ -96,18 +347,20 @@ h1,
   z-index: 2;
 }
 
-.carousel-prev {
+/* .carousel-prev {
   left: 10px;
+} */
+
+.carousel-prev img {
+  transform: rotate(90deg);
 }
 
-.carousel-next {
+/* .carousel-next {
   right: 10px;
-}
+} */
 
-.carousel-prev:hover,
-.carousel-next:hover {
-  background: none;
-  color: #999;
+.carousel-next img {
+  transform: rotate(-90deg);
 }
 
 /* Fade animation */
@@ -126,7 +379,7 @@ h1,
 
 @media (max-width: 760px) {
   .carousel-slide img {
-    height: 250px;
+    height: 100px;
   }
 
   .carousel-prev,
@@ -152,7 +405,7 @@ h1,
   border: none;
   border-radius: 0;
   color: #1f0605;
-  font-size: 30px;
+
   cursor: pointer;
   padding: 10px;
   z-index: 2;
@@ -185,7 +438,7 @@ h1,
 /* Venstre side */
 
 .stores-content h2 {
-  margin-bottom: 35px;
+  margin-block: 35px;
 }
 
 /* Dropdown */
@@ -363,11 +616,16 @@ h1,
 
 .stores-image img {
   display: block;
-  width: 100%;
+  width: 120%;
   object-fit: cover;
-  margin-top: -48px;
-  margin-right: -40px;
+
   justify-self: end;
+}
+
+@media (min-width: 760px) {
+  .stores-image img {
+    justify-self: end;
+  }
 }
 
 /* Mobil */
@@ -382,7 +640,6 @@ h1,
   }
 
   .stores-image {
-    height: 450px;
     min-height: 0;
   }
 }
@@ -438,4 +695,14 @@ h1,
   text-transform: uppercase;
   white-space: nowrap;
   pointer-events: none;
+}
+
+footer .custom-sketch-btn img {
+  height: auto;
+}
+@media (max-width: 760px) {
+  .footer-flex {
+    display: flex;
+    flex-direction: column;
+  }
 }
