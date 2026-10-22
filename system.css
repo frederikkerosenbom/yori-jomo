@@ -1493,26 +1493,3 @@ html {
 
 /* ========== 12: Custom CSS ========== */
 /* Tilføj dine egne brugerdefinerede stilarter her - eller tilføj dem i en separat fil */
-/*Kodeord*/
-.password-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fcfbf9; /* Brug den farve, der passer til din baggrund */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* Sørger for den ligger øverst af alt */
-}
-
-#passwordForm {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-  text-align: center;
-}
